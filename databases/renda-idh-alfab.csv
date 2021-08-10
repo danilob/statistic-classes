@@ -1,7 +1,7 @@
 # idh: Índice de Desenvolvimento Humano (IDH) (2000);
 # renda: Renda per capita (2000);
 # anfab: Alfabetizados - pessoas 15 anos e mais (2000);
-???Sigla;Código;Município;idh;renda;alfab;
+Sigla;Código;Município;idh;renda;alfab;
 AC;1200013;Acrelândia;;136,539;73,309;
 AC;1200054;Assis Brasil;;115,16;70,954;
 AC;1200104;Brasiléia;;132,383;75,493;
