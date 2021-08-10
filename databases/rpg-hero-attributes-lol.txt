@@ -1,0 +1,146 @@
+#-----------------------------------------------------------------------
+# Atributos dos heróis de League of Legends.
+# Dados extraídos do site <https://www.unitstatistics.com/league-of-legends/>.
+#
+# Importação dos dados com o R:
+#
+# tb <- read.table("http://leg.ufpr.br/~walmes/data/rpg-hero-attributes-lol.txt",
+#                  header = TRUE,
+#                  sep = "\t",
+#                  comment.char = "#",
+#                  quote = "",
+#                  stringsAsFactors = FALSE,
+#                  check.names = FALSE)
+# str(tb)
+#-----------------------------------------------------------------------
+Champion	Type	Type2	T	J	M	A	S	DamageType	Output	HP	HPUp	Regen	RegenUp	Mana	ManaUp	Regen2	Regen2Up	Damage	DamageUp	AS	ASUp	Armor	ArmorUp	MR	MRUp	Speed	Range	Resource	Movement	Closers	IP	RP	Date
+Aatrox	Fighter	Tank	1	1	0	0	0	physical	sustain	538	85	6.59	0.5	30	45	0	0	60	3.2	0.651	3	24.38	3.8	32.1	1.25	345	150	health	Dash		6300	975	2013
+Ahri	Mage	Assassin	0	0	1	0	0	magic	burst	514	80	6505	0.6	334	50	6	0.8	53	3	0.668	2	20.88	3.5	30	0	330	550	mana	Dash		4800	880	2011
+Akali	Assassin		1	1	1	0	0	mixed	burst	588	85	8.34	0.65	200	0	50	0	58	3.2	0.694	3.1	26.38	3.5	32.1	1.25	350	125	energy	Stealth	Dash	3150	790	2010
+Alistar	Tank		1	0	0	0	1	mixed	sustain	613	106	8675	0.85	278.84	38	8.5	0.8	61	3.62	0.625	2.13	24.38	3.5	32.1	1.25	330	125	mana			1350	585	2009
+Amumu	Tank	Mage	1	1	0	0	0	magic	sustain	613	84	8875	0.85	287.2	40	7.38	0.525	53	3.8	0.638	2.18	23.54	3.8	32.1	1.25	335	125	mana		Dash	450	260	2009
+Anivia	Mage	Support	0	0	1	0	1	magic		468	70	5.57	0.55	396.04	50	6	0.8	51	3.2	0.625	1.6800000000000002	21.22	4	30	0	325	600	mana			3150	790	2009
+Annie	Mage		1	0	1	0	1	magic		512	76	5.42	0.55	334	50	6	0.8	50	2625	0.579	1.36	19.22	4	30	0	335	575	mana			450	260	2009
+Ashe	Marksman	Support	0	0	0	1	1	physical	sustain	528	79	5.42	0.55	280	32	6.970000000000001	0.4	57	2.2600000000000002	0.658	3.3299999999999996	21.21	3.4	30	0	325	600	mana			450	260	2009
+Azir	Mage	Marksman	1	0	1	0	0	magic	sustain	524	80	6.92	0.55	350.56	42	6	0.8	52	2.8	0.625	1.5	19.04	3	30	0	325	525	mana	Dash		6300	975	2014
+Bard	Support		0	0	0	0	1	magic		535	93	5.4	0.55	350	50	6	0.45	52	3	0.625	1	25	4	30	0	330	500	mana	Sprint		6300	975	2015
+Blitzcrank	Tank	Fighter	0	0	1	0	1	mixed		583	95	8.51	0.75	267.2	40	8.5	0.8	62	3.5	0.625	1.1300000000000001	24.38	4	32.1	1.25	325	125	mana	Sprint	Pull	3150	790	2009
+Brand	Mage		0	0	1	0	1	magic		508	76	5.42	0.55	375.6	42	8005	0.6	57	3	0.625	1.36	21.88	3.5	30	0	340	550	mana			4800	880	2011
+Braum	Support	Tank	0	0	0	0	1	mixed		576	87	8.18	1	310.6	45	6	0.8	55	3.2	0.644	3.5	26.72	4.5	32.1	1.25	335	125	mana		Dash	6300	975	2014
+Caitlyn	Marksman		0	0	0	1	0	physical		524	80	5.67	0.55	313.8	35	7.42	0.55	54	2.18	0.568	4	22.88	3.5	30	0	325	650	mana	Dash		4800	880	2011
+Cassiopeia	Mage		0	0	1	0	0	magic		506	75	5.6899999999999995	0.5	370.8	60	6	0.8	50	3.2	0.647	1.6800000000000002	22.22	4	30	0	335	550	mana			4800	880	2010
+Cho'Gath	Tank	Mage	1	1	0	0	0	magic		574	80	8925	0.85	272.2	40	7205	0.45	61	4.2	0.625	1.44	28.88	3.5	32.1	1.25	345	125	mana			1350	585	2009
+Corki	Marksman		0	0	0	1	0	mixed		513	82	5.42	0.55	280	34	7.42	0.55	56	2.5	0.625	2.3	23.38	3.5	30	0	325	550	mana	Dash		3150	790	2009
+Darius	Fighter	Tank	1	0	0	0	0	mixed		582	100	9845	0.95	263	37.5	6585	0.35	56	5	0.625	1	29.88	4	32.1	1.25	340	175	mana			6300	975	2012
+Diana	Fighter	Mage	1	1	1	0	0	magic		589	90	7425	0.85	297.2	40	6	0.8	53	3	0.625	2.25	26.05	3.6	32.1	1.25	345	150	mana		Dash	6300	975	2012
+Dr. Mundo	Fighter	Tank	1	0	0	0	0	mixed		583	89	7.76	0.75	0	0	0	0	61	3	0.625	2.8	26.88	3.5	32.1	1.25	345	125	health	Sprint		1350	585	2009
+Draven	Marksman		0	0	0	1	0	physical		558	82	6175	0.7	360.56	39	8.04	0.65	56	2.9099999999999997	0.679	2.7	25.54	3.3	30	0	330	550	mana	Sprint		6300	975	2012
+Ekko	Assassin	Fighter	1	1	1	0	0	magic	burst	580	80	9	0.9	280	50	6	0.6	59	3	0.625	3.3	27	3	32.1	1.25	340	125	mana	Dash, Sprint	Blink	6300	975	2015
+Elise	Mage	Fighter	0	1	0	0	0	mixed		529	80	5705	0.6	324	50	6	0.8	50	3	0.625	1.75	22.13	3.35	30	0	325	550	mana	Blink (ish)		6300	975	2012
+Evelynn	Assassin	Mage	0	1	0	0	0	mixed		531	90	9.82	0.55	315.6	42	8105	0.6	54	3.5	0.625	3.6	26.5	3.8	32.1	1.25	340	125	mana	Sprint		1350	585	2009
+Ezreal	Marksman	Mage	0	0	1	1	0	mixed		484	80	6.42	0.55	360.6	42	8.09	0.65	56	2.4099999999999997	0.625	2.8	21.88	3.5	30	0	325	550	mana	Blink		4800	880	2010
+Fiddlesticks	Mage	Support	0	1	1	0	1	magic		524	80	5605	0.6	400.12	56	6	0.8	48	2625	0.625	2.11	20.88	3.5	30	0	335	480	mana	Blink		1350	585	2009
+Fiora	Fighter	Assassin	1	0	0	0	0	physical		550	85	8.25	0.55	300	40	8	0.7	60	3.3	0.69	3.2	24	3.5	32.1	1.25	345	150	mana			4800	880	2012
+Fizz	Assassin	Fighter	1	1	1	0	0	mixed	burst	558	86	8175	0.7	317.2	37	6	0.8	58	3	0.658	3.1	22.41	3.4	32.1	1.25	335	175	mana	Dash		4800	880	2011
+Galio	Tank	Mage	0	0	1	0	1	magic		578	85	8.709999999999999	0.75	369	47	6	0.8	62	3375	0.638	1.2	26.88	3.5	32.1	1.25	335	125	mana			4800	880	2010
+Gangplank	Fighter	Support	1	0	0	0	1	physical		540	82	6	0.6	282	40	7.5	0.7	56	3	0.651	3.2	26	3	32.1	1.25	345	125	mana			3150	790	2009
+Garen	Fighter	Tank	1	0	0	0	0	physical		616	84.25	7.84	0.5	0	0	0	0	58	4.5	0.625	2.9	27.54	3	32.1	1.25	340	175	none	Sprint		450	260	2010
+Gnar	Fighter	Marksman	1	0	0	0	0	mixed		540	65	2.5	0.5	100	0	0	0	48	3	0.625	0.5	23	2.5	30	0	325	175	rage	Dash		6300	975	2014
+Gragas	Fighter	Mage	0	1	1	0	1	mixed		584	89	5.5	0.5	400	47	6	0.8	61	3.5	0.651	2.05	26.05	3.6	32.1	1.25	330	125	mana		Dash	3150	790	2010
+Graves	Marksman		0	0	0	1	0	physical	burst	551	84	6675	0.7	322.2	40	7925	0.7	61	2.4099999999999997	0.481	2.9	24.38	3.4	30	0	340	425	mana	Dash		4800	880	2011
+Hecarim	Fighter	Tank	0	1	0	0	0	physical	sustain	581	90	7	0.75	277.2	40	6505	0.6	58	3.2	0.67	2.5	26.72	4	32.1	1.25	345	175	mana	Dash, Sprint		4800	880	2012
+Heimerdinger	Mage	Support	0	0	1	0	0	magic		476	75	11005	1.75	307.2	40	6	0.8	56	2.7	0.625	1.36	19.04	3	30	0	340	550	mana			3150	790	2009
+Illaoi	Fighter	Tank	1	0	0	0	0	physical		586	95	9.5	0.8	300	40	7.5	0.75	60	5	0.571	2.5	26	3.8	32.1	1.25	340	125	mana		Dash	6300	975	2015
+Irelia	Fighter	Assassin	1	0	0	0	0	mixed		607	90	8.59	0.65	338.8	32	8.09	0.65	62	3.3	0.665	3.2	25.3	3.75	32.1	1.25	345	125	mana		Dash	4800	880	2010
+Janna	Support	Mage	0	0	0	0	1	magic		487	78	5.42	0.55	409.52	64	11.5	0.4	52	2.9499999999999997	0.625	2.61	19.38	3.8	30	0	335	475	mana			1350	585	2009
+Jarvan IV	Tank	Fighter	0	1	0	0	0	physical		571	90	8175	0.7	302.2	40	6755	0.45	56	3.4	0.658	2.5	29.05	3.6	32.1	1.25	340	175	mana	Dash		4800	880	2011
+Jax	Fighter	Assassin	1	0	0	0	0	mixed	sustain	593	85	8.370000000000001	0.55	338.8	32	7575	0.7	62	3375	0.638	3.4	27.04	3	32.1	1.25	350	125	mana		Dash	1350	585	2009
+Jayce	Fighter	Marksman	1	0	1	0	0	physical		571	90	7.34	0.8	357.2	37	6	0.8	5	3.5	0.658	3	22.38	3.5	30	0	335	125	mana			6300	975	2012
+Jhin	Marksman	Assassin	0	0	0	0	0			540	85	6	0.55	300	50	6	0.8	53	3.5	0.625	3	20	3.5	30	0	330	550				6300	975	2016
+Jinx	Marksman		0	0	0	1	0	physical		518	82	5.84	0.5	245.6	45	6.68	1	58	2.4099999999999997	0.625	1	22.88	3.5	30	0	325	525	mana			6300	975	2013
+Kalista	Marksman		0	0	0	1	0	physical	sustain	518	83	6	0.55	231.8	35	6.3	0.4	63	2.9099999999999997	0.694	2.8	19.01	3.5	30	0	325	550	mana		Dash	6300	975	2014
+Karma	Mage	Support	1	0	1	0	1	magic	burst	522	83	5.619999999999999	0.55	374	50	8.5	0.8	54	3.3	0.625	2.3	20.38	3.8	30	0	335	525	mana	Sprint		3150	790	2011
+Karthus	Mage		0	0	1	0	0	magic		516	75	6.42	0.55	372.48	61	6	0.8	46	3.25	0.625	2.11	20.88	3.5	30	0	335	450	mana			3150	790	2009
+Kassadin	Assassin	Mage	1	0	1	0	0	magic		564	78	7.79	0.5	397.6	67	6	0.8	59	3.9	0.64	3.7	23.38	3.2	30	0	340	150	mana	Blink		3150	790	2009
+Katarina	Assassin	Mage	1	0	1	0	0	magic	burst	510	83	4.5	0.55	0	0	0	0	58	3.2	0.658	2.74	26.88	3.5	32.1	1.25	345	125	none	Blink		3150	790	2009
+Kayle	Fighter	Support	1	1	1	0	1	mixed		574	93	8.26	0.75	322.2	40	6	0.8	51	2.8	0.638	2.2	26.88	3.5	30	0	335	125	mana	Sprint		450	260	2009
+Kennen	Mage	Marksman	1	0	1	1	1	mixed		536	79	5.59	0.65	200	0	50	0	51	3.3	0.69	3.4	24.3	3.75	30	0	335	550	energy	Sprint		4800	880	2010
+Kha'Zix	Assassin		0	1	0	0	0	physical		573	85	7.51	0.75	327.2	40	7.59	0.5	55	3.1	0.668	2.7	27	3	32.1	1.25	350	125	mana		Dash	6300	975	2012
+Kindred	Marksman		0	1	0	0	0	physical	sustain	540	85	7	0.55	300	35	6.95	0.4	54	1.61	0.625	2.5	20	3.5	30	0	325	500	mana	Dash		6300	975	2015
+Kog'Maw	Marksman	Mage	0	0	0	1	0	mixed		518	82	5.92	0.55	322.2	40	8675	0.7	57	2.4099999999999997	0.625	1.5	19.88	3.5	30	0	325	500	mana			4800	880	2010
+LeBlanc	Assassin	Mage	0	0	1	0	0	magic	burst	516	75	7.42	0.55	334	50	6	0.8	55	3.5	0.625	1.4	21.88	3.5	30	0	335	525	mana	Dash, decoy		3150	790	2010
+Lee Sin	Fighter	Assassin	0	1	0	0	0	physical		571	85	7425	0.7	200	0	50	0	61	3.2	0.651	3	24.22	3.7	32.1	1.25	350	125	energy		Dash	4800	880	2011
+Leona	Tank	Support	0	0	0	0	1	mixed		576	87	8425	0.85	302.2	40	6	0.8	60	3	0.625	2.9	27.21	3.6	32.1	1.25	335	125	mana		Dash	4800	880	2011
+Lissandra	Mage		1	0	1	0	0	magic		506	84	6.92	0.55	304	50	5.67	0.4	51	2.7	0.625	1.36	20.22	3.7	30	0	325	550	mana	Blink		6300	975	2013
+Lucian	Marksman		0	0	0	1	0	physical	sustain	554	80	6.1899999999999995	0.65	348.88	38	8175	0.7	57	2.4099999999999997	0.638	3.3	24.04	3	30	0	335	500	mana	Dash		6300	975	2013
+Lulu	Support	Mage	1	0	1	0	1	magic		553	74	6005	0.6	350	55	11	0.6	46	2.6	0.625	2.25	19.22	3.7	30	0	325	550	mana			4800	880	2012
+Lux	Mage	Support	0	0	1	0	1	magic	burst	478	79	5.42	0.55	384	47	6	0.8	54	3.3	0.625	1.36	18.72	4	30	0	330	550	mana			3150	790	2010
+Malphite	Tank	Fighter	1	0	0	0	0	mixed		574	90	7	0.55	282.2	40	7.319999999999999	0.55	62	3375	0.638	3.4	28.3	3.75	32.1	1.25	335	125	mana	Dash		1350	585	2009
+Malzahar	Mage	Assassin	0	0	1	0	0	magic		514	80	5.42	0.55	325.6	45	6	0.8	55	3	0.625	1.36	21.88	3.5	30	0	335	500	mana			4800	880	2010
+Maokai	Tank	Mage	1	1	0	0	0	magic		572	90	7	0.75	377.28	43	7205	0.45	64	3.3	0.694	2.13	28.72	4	30	0	335	125	mana			4800	880	2011
+Master Yi	Assassin	Fighter	1	1	0	0	0	physical		599	92	7.59	0.65	250.56	42	7255	0.45	60	3	0.679	2	24.04	3	32.1	1.25	355	125	mana	Sprint		450	260	2009
+Miss Fortune	Marksman		0	0	0	1	0	physical		530	85	6.1899999999999995	0.65	325.84	35	8.04	0.65	46	1	0.656	3	24.04	3	30	0	325	550	mana			3150	790	2010
+Mordekaiser	Fighter	Mage	1	0	0	0	0	magic		525	73	4	0.3	120	0	0	0	61	5	0.601	2.2	20	3.75	32.1	1.25	325	175	health			3150	790	2010
+Morgana	Mage	Support	0	0	1	0	1	magic		547	86	5705	0.6	340.8	60	8.5	0.8	55	3.5	0.625	1.53	25.38	3.8	30	0	335	450	mana			1350	585	2009
+Nami	Support	Mage	0	0	0	0	1	magic		489	74	5.42	0.55	377.24	43	11.5	0.4	51	3.1	0.644	2.61	19.72	4	30	0	335	550	mana			6300	975	2012
+Nasus	Fighter	Tank	1	1	0	0	0	mixed	sustain	561	90	9.01	0.9	325.6	42	7.44	0.5	59	3.5	0.638	3.48	24.88	3.5	32.1	1.25	350	125	mana			1350	585	2009
+Nautilus	Tank	Fighter	0	1	0	0	1	mixed		576	86	8.370000000000001	0.55	334	47	8625	0.7	58	3.3	0.613	1	26.46	3.75	32.1	1.25	325	175	mana		Pull	4800	880	2012
+Nidalee	Assassin	Fighter	1	1	1	0	1	mixed	burst	511	80	6005	0.6	295.6	45	6	0.8	48	3.5	0.638	3.22	22.88	3.5	30	0	335	525	mana	Dash		3150	790	2009
+Nocturne	Assassin	Fighter	0	1	0	0	0	physical		583	85	8.26	0.75	273.8	35	6755	0.45	59	3.1	0.668	2.7	26.88	3.5	32.1	1.25	345	125	mana	Sprint	Dash	4800	880	2011
+Nunu	Support	Fighter	0	1	0	0	1	magic		598	90	8.39	0.8	283.56	42	7.44	0.5	57	3.4499999999999997	0.625	2.25	26.38	3.5	32.1	1.25	350	125	mana			450	260	2009
+Olaf	Fighter	Tank	1	1	0	0	0	physical		597	93	8.51	0.9	315.6	42	7465	0.575	60	3.5	0.694	2.7	26.04	3	32.1	1.25	350	125	mana			3150	790	2010
+Orianna	Mage	Support	0	0	1	0	1	magic		518	79	6.87	0.55	334	50	6	0.8	40	2.6	0.658	3.5	17.04	3	30	0	325	525	mana			4800	880	2011
+Pantheon	Fighter	Assassin	1	1	0	0	0	physical		579	87	7.84	0.65	317.12	31	7355	0.45	56	2.9	0.644	2.9499999999999997	27.65	3.9	32.1	1.25	355	150	mana	Teleport	Dash	3150	790	2010
+Poppy	Fighter	Assassin	1	0	0	0	0	mixed		540	90	8	0.8	280	40	7	0.7	56	4	0.625	2.5	29	3.5	32	1.25	345	125	mana		Dash	450	260	2010
+Quinn	Marksman	Fighter	1	0	0	1	0	physical		533	85	5.42	0.55	268.8	35	6.970000000000001	0.4	54	2.4099999999999997	0.668	3.1	23.38	3.5	30	0	335	525	mana	Dash		6300	975	2013
+Rammus	Tank	Fighter	1	1	0	0	0	mixed		564	86	7.92	0.55	310.44	33	7.84	0.5	56	3.5	0.625	2.22	31.38	4.3	32.1	1.25	335	125	mana	Sprint		1350	585	2009
+Rek'Sai	Fighter		1	1	0	0	0	physical	sustain	570	90	7.35	0.65	100	0	0	0	56	3.3499999999999996	0.667	2	28.3	3.75	32.1	1.25	335	175	fury	Dash		6300	975	2014
+Renekton	Fighter	Tank	1	0	0	0	0	physical		572	87	7.96	0.75	100	0	0	0	58	3.1	0.665	2.65	25.58	3.8	32.1	1.25	345	125	fury	Dash		4800	880	2011
+Rengar	Assassin	Fighter	1	1	0	0	0	physical	burst	586	90	4.2700000000000005	0.4	5	0	0	0	60	3	0.679	2.8499999999999996	25.88	3.5	32.1	1.25	345	125	ferocity	Sprint	Dash	6300	975	2012
+Riven	Fighter	Assassin	1	1	0	0	0	physical		558	86	5.34	0.5	0	0	0	0	56	3	0.625	3.5	24.38	3.2	32.1	1.25	340	125	none	Dash		4800	880	2011
+Rumble	Fighter	Mage	1	0	0	0	0	magic	sustain	584	80	8005	0.6	100	0	0	0	61	3.2	0.644	1.85	25.88	3.5	32.1	1.25	345	125	heat	Sprint		4800	880	2011
+Ryze	Mage	Fighter	1	0	1	0	0	magic		558	86	5.2700000000000005	0.55	392.4	52	5	1	55	3	0.625	2.11	21.55	3	30	0	340	550	mana			450	260	2009
+Sejuani	Tank	Fighter	0	1	0	0	0	mixed	sustain	600	95	8675	0.85	400	40	7205	0.45	58	3.3	0.67	1.44	29.54	3	32.1	1.25	340	125	mana	Dash		4800	880	2012
+Shaco	Assassin		0	1	0	0	0	mixed		582	84	8.370000000000001	0.55	297.2	40	7155	0.45	58	3.5	0.694	3	24.88	3.5	32.1	1.25	350	125	mana	Decoy, blink		3150	790	2009
+Shen	Tank	Fighter	1	0	0	0	0	mixed	sustain	540	73	8.5	0.75	400	0	50	0	60	3	0.651	2	25	2.6	32.1	1.25	340	125	energy	Dash		3150	790	2010
+Shyvana	Fighter	Tank	1	1	0	0	0	physical		595	95	8.59	0.8	100	0	0	0	61	3.4	0.658	2.5	27.63	3.35	32.1	1.25	350	125	fury	Dash, sprint		3150	790	2011
+Singed	Tank	Fighter	1	0	0	0	0	magic	sustain	543	82	8.02	0.55	290.6	45	7.52	0.55	62	3375	0.613	1.81	27.88	3.5	32.1	1.25	345	125	mana	Sprint		1350	585	2009
+Sion	Fighter	Tank	1	0	0	0	0	physical		543	73	10.18	0.8	325.6	42	8005	0.6	60	4	0.679	1.3	23.04	3	32.1	1.25	345	175	mana		Sprint	1350	585	2009
+Sivir	Marksman		0	0	0	1	0	physical		516	82	5.17	0.55	284	50	8.01	0.9	57	2.4099999999999997	0.625	1.6	22.21	3.25	30	0	335	500	mana		Sprint	450	260	2009
+Skarner	Fighter	Tank	0	1	0	0	0	mixed	sustain	601	90	8925	0.85	272.2	40	7205	0.45	57	4.5	0.625	2.1	29.38	3.8	32.1	1.25	335	125	mana	Sprint		4800	880	2011
+Sona	Support	Mage	0	0	0	0	1	magic		482	77	5.42	0.55	340.6	45	11.5	0.4	50	3	0.644	2.3	20.54	3.3	30	0	325	550	mana		Sprint	3150	790	2010
+Soraka	Support	Mage	0	0	0	0	1	magic		529	78	2.5	0.5	350.8	60	11.5	0.4	50	3	0.625	2.14	23.38	3.8	30	0	325	550	mana			450	260	2009
+Swain	Mage	Fighter	0	0	1	0	0	magic		516	90	7.84	0.65	374	47	6	0.8	52	3	0.625	2.11	22.72	4	30	0	335	500	mana			4800	880	2010
+Syndra	Mage	Support	0	0	1	0	0	magic		511	78	6505	0.6	384	60	6	0.8	54	2.9	0.625	2	24.71	3.4	30	0	330	550	mana			6300	975	2012
+Tahm Kench	Support	Tank	1	1	0	0	1	magic	sustain	610	95	6.5	0.55	325	40	8	1	56	3.2	0.613	2.5	27	3.5	32.1	1.25	335	175	mana	Sprint, teleport	Sprint	6300	975	2015
+Talon	Assassin	Fighter	0	0	1	0	0	physical	burst	583	85	8.51	0.75	377.2	37	7.59	0.5	55	3.1	0.668	2.7	26.88	3.5	32.1	1.25	350	125	mana	Sprint	Blink	4800	880	2011
+Taric	Support	Fighter	0	0	0	0	1	mixed		619	90	7.94	0.5	300	60	8.5	0.8	58	3.5	0.625	2.02	25.88	3.7	32.1	1.25	340	125	mana			1350	585	2009
+Teemo	Marksman	Assassin	1	0	0	0	0	mixed	sustain	516	82	5.74	0.65	267.2	40	7205	0.45	50	3	0.69	3.38	24.3	3.75	30	0	330	500	mana	Sprint		1350	585	2009
+Thresh	Support	Fighter	0	0	0	0	1	mixed		561	93	6.92	0.55	273.92	44	6	0.8	48	2.2	0.625	3.5	16	0	30	0	335	450	mana		Pull	6300	975	2013
+Tristana	Marksman	Assassin	0	0	0	1	0	mixed		543	82	6.1899999999999995	0.65	246.76	32	7205	0.45	57	2.4099999999999997	0.656	1.5	22	3	30	0	325	550	mana	Dash		1350	585	2009
+Trundle	Fighter	Tank	0	1	0	0	0	physical		616	96	9425	0.85	281.6	45	7505	0.6	60	3	0.67	2.9	27.54	2.7	32.1	1.25	350	175	mana			4800	880	2010
+Tryndamere	Fighter	Assassin	1	0	0	0	0	physical	sustain	626	98	8.51	0.9	100	0	0	0	61	3.2	0.67	2.9	24.11	3.1	32.1	1.25	345	125	fury	Dash		1350	585	2009
+Twisted Fate	Mage		0	0	1	0	0	mixed		522	82	5505	0.6	265.84	38	6	0.8	50	3.3	0.651	3.22	20.54	3.15	30	0	330	525	mana	Teleport		1350	585	2009
+Twitch	Marksman	Assassin	0	0	0	1	0	physical		525	81	6005	0.6	287.2	40	7255	0.45	55	2.4099999999999997	0.679	3.38	23.04	3	30	0	330	550	mana			3150	790	2009
+Udyr	Fighter	Tank	0	1	0	0	0	physical		593	99	8.709999999999999	0.75	270.4	30	7505	0.45	58	3.2	0.658	2.67	25.47	4	32.1	1.25	345	125	mana	Sprint		1350	585	2009
+Urgot	Marksman	Tank	1	0	0	1	0	physical	sustain	587	89	6505	0.6	312.4	55	8.59	0.65	52	3.6	0.644	2.9	24.54	3.3	30	0	335	425	mana			3150	790	2010
+Varus	Marksman	Mage	0	0	1	1	0	mixed		538	82	5.42	0.55	360.48	33	7.34	0.8	55	2.4099999999999997	0.658	3	23.21	3.4	30	0	330	575	mana			4800	880	2012
+Vayne	Marksman	Assassin	1	0	0	1	0	physical		498	83	5.42	0.55	231.8	35	6.970000000000001	0.4	56	1.6600000000000001	0.658	4	19.01	3.4	30	0	330	550	mana	Dash	Sprint	4800	880	2011
+Veigar	Mage		0	0	1	0	0	magic	burst	493	82	5.42	0.55	392.4	52	6	0.8	51	2625	0.625	2.24	22.55	3.75	30	0	340	525	mana			1350	585	2009
+Vel'Koz	Mage		0	0	1	0	1	magic		508	76	5.42	0.55	375.6	42	6	0.8	55	3141	0.625	1.36	21.88	3.5	30	0	340	525	mana			6300	975	2014
+Vi	Fighter	Assassin	1	1	0	0	0	physical		583	85	9.01	0.9	295.6	45	8.09	0.65	56	3.5	0.644	2.5	25.88	3.5	32.1	1.25	345	125	mana	Dash	Dash	6300	975	2012
+Viktor	Mage		0	0	1	0	0	magic		516	78	7.84	0.65	324	50	6	0.8	52	3	0.658	2.11	22.72	4	30	0	335	525	mana			4800	880	2011
+Vladimir	Mage	Tank	1	0	1	0	0	magic	sustain	550	84	7005	0.6	0	0	0	0	52	3	0.658	2	21.88	3.5	30	0	330	450	health			4800	880	2010
+Volibear	Fighter	Tank	0	1	0	0	0	physical		584	86	8.09	0.65	270.4	30	8.09	0.65	60	3.3	0.658	2.67	26.38	3.5	32.1	1.25	345	125	mana	Sprint		4800	880	2011
+Warwick	Fighter	Tank	0	1	0	0	0	physical		593	98	8.39	0.8	240.4	30	8105	0.6	62	3375	0.679	2.88	25.88	3.5	32.1	1.25	345	125	mana			450	260	2009
+Wukong	Fighter	Tank	1	1	0	0	0	physical		578	85	6.1899999999999995	0.65	265.84	38	8.04	0.65	60	3.2	0.658	3	24.88	3.5	32.1	1.25	345	175	mana	Decoy		4800	880	2011
+Xerath	Mage	Assassin	0	0	1	0	0	magic		514	80	5.42	0.55	366.96	44	6	0.8	55	3	0.625	1.36	21.88	3.5	30	0	340	525	mana			4800	880	2011
+Xin Zhao	Fighter	Assassin	0	1	0	0	0	physical		600	92	8175	0.7	273.8	35	7255	0.45	58	3.3	0.672	2.6	25.88	3.5	32.1	1.25	345	175	mana		Dash	1350	585	2010
+Yasuo	Fighter	Assassin	0	0	1	0	0	physical		518	82	6.51	0.9	60	0	0	0	55	3.2	0.658	3.2	24.71	3.4	30	0	345	175	none	Dash		6300	975	2013
+Yorick	Fighter	Mage	1	0	0	0	0	mixed		564	85	8175	0.7	293.8	35	6755	0.45	58	3.5	0.625	3	25.05	3.6	32.1	1.25	345	125	mana			4800	880	2011
+Zac	Tank	Fighter	0	1	0	0	0	magic		615	95	7.92	0.55	0	0	0	0	60	3375	0.638	1.6	23.88	3.5	32.1	1.25	340	175	health	Dash		6300	975	2013
+Zed	Assassin	Fighter	0	0	1	0	0	physical		579	80	7.09	0.65	200	0	50	0	55	3.4	0.644	2.1	26.88	3.5	32.1	1.25	345	125	energy	Blink		6300	975	2012
+Ziggs	Mage		0	0	1	0	0	magic		524	80	6255	0.6	384	47	6	0.8	54	3.1	0.656	2	21.54	3.3	30	0	325	550	mana	Dash		4800	880	2012
+Zilean	Support	Mage	0	0	1	0	1	magic		499	71	5.44	0.5	360.8	60	8.5	0.8	52	3	0.625	2.13	19.13	3.8	30	0	335	550	mana	Sprint		1350	585	2009
+Zyra	Mage	Support	0	0	1	0	1	magic		479	74	5.6899999999999995	0.5	334	50	8.5	0.8	53	3.2	0.625	2.11	20.04	3	30	0	325	575	mana			6300	975	2012
+#---------------

@@ -1,0 +1,79 @@
+Dados extraídos do <https://www.whoscored.com/> no dia 25 de Maio de
+2019 por Web Scraping. Foram extraídos dados acumulados até o final de
+cada campeonato. Portando os valores são sobre as 38 rodadas de
+jogos. No Campeonato Brasileiro, cada time joga 38 jogos pois são 2
+jogos com cada um dos 19 adversários.
+
+O dicionário oficial do Who Scored define a maioria dos termos:
+<https://www.whoscored.com/Glossary>. Uma tradução livre foi feita.
+
+-- Variável --      : -- Descrição --
+TeamId              : número indentificador do time.
+PlayerId            : número indentificador do johador.
+IsCurrentPlayer     : é jogador titular (caso contrário é jogador
+                      reserva).
+GameStarted         : número de jogos começados como titular.
+SubOn               : número de vezes que substituiu um jogador.
+SubOff              : número de vezes que foi subsitituido por jogador.
+Yellow              : número de cartões amarelos recebidos.
+SecondYellow        : número de partidas em que ganhou segundo cartão
+                      amarelo.
+Red                 : número de cartões vermelhos.
+Goals               : número de gols feitos.
+Assists             : número de assistências ou passes para gol.
+TotalPasses         : total de passes.
+AccuratePasses      : total de passes corretos.
+AerialWon           : número de disputas aéreas ganhas.
+AerialLost          : número de disputas aéras perdidas.
+Rating              : avaliação do valor do jogador.
+ManOfTheMatch       : número de vezes que foi o homem com maior rating
+                      da partida.
+TotalTackles        : tentativas de desarme ou captura de bola.
+Interceptions       : total de passes de bola interceptados.
+Fouls               : número de infrações cometidas.
+OffsidesWon         : número de impedimentos ganhos, em que foi o último
+                      homem.
+TotalClearances     : total de bolas chutes para longe (alívio) para
+                      defender o gol.
+WasDribbled         : número de vezes em que foi driblado.
+TotalShots          : total de chutes com intenção de gol.
+ShotsOnTarget       : número de chutes ao alvo (que seriam gol se não
+                      fossem bloqueados).
+ShotsBlocked        : número de chutes a gol que defendeu.
+OwnGoals            : número de gols contra feitos.
+KeyPasses           : número de passes chave que criaram oportunidades
+                      de gol.
+Dribbles            : número de vezes que driblou oponente.
+WasFouled           : número faltas/infrações sofridas.
+Offsides            : número de impedimentos.
+Dispossesed         : número de vezes com posse de bola perdida sem
+                      estar em tentativa de drible.
+Turnovers           : número de perdas de posse de bola por acidente,
+                      falta de controle.
+TotalCrosses        : total de cruzamentos.
+AccurateCrosses     : total de cruzamentos certos.
+TotalLongBalls      : total um passe de bola em distância superior a 25
+                      yards (22.86 metros).
+AccurateLongBalls   : total de enfiadas de bola certas.
+TotalThroughBalls   : total de enfiadas de bola, de um lado para o outro
+                      do campo.
+AccurateThroughBalls: total de enfiadas de bola corretas.
+RegionCode          : código da região.
+TeamRegionCode      : código do time na região.
+TeamName            : nome do time em que joga.
+PositionText        : posição em que joga no sentido do comprimento do
+                      campo.
+PlayedPositionsRaw  : posições em que jogou.
+Height              : altura (cm)
+Weight              : peso (kg).
+FirstName           : primeiro nome.
+LastName            : último nome.
+KnownName           : nome pelo qual é conhecido ou estampado no
+                      uniforme.
+WSName              : apelido.
+DateOfBirth         : data de nascimento.
+Ranking             : classificação do jogador.
+PositionShort       : posição em que joga, versão curta.
+PositionLong        : posição em que joga, versão extensa.
+Name                : nome do jogador.
+Age                 : idade (anos).
